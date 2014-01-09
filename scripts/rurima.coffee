@@ -32,7 +32,8 @@ module.exports = (robot) ->
         selector.slice(0, max).each (index, element) ->
           href = url + $(this).attr('href')
           name = $(this).text()
-          result.push "[#{name}](#{href})"
+          #result.push "[#{name}](#{href})"
+          result.push "#{name}\n#{href}\n"
         if result.length == 0
           msg.send "not found"
         else
