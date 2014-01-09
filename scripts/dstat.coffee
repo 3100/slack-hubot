@@ -29,7 +29,7 @@ module.exports = (robot) ->
     dstat.stdout.on 'data', (data) ->
       result += data.toString()
     dstat.on 'exit', (code) ->
-      msg.send, shape_for_markdown(result)
+      msg.send shape_for_markdown(result)
 
   shape_for_markdown = (str) ->
     # str has some unwanted characters on its head. I don't know why.
