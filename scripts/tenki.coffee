@@ -18,7 +18,10 @@ module.exports = (robot) ->
 
 calcMinutes = (minutesStr) ->
   val = parseInt(minutesStr) - 1
-  Math.floor(val / 5) * 5
+  val = Math.floor(val / 5) * 5
+  if val < 10
+    return "0#{val}"
+  return "#{val}"
 
 getUrl = ->
   now = moment()
