@@ -15,6 +15,7 @@
 #   hubot menu m[atsuya]
 #   hubot menu o[nigiri]
 #   hubot menu y[occhi]
+#   hubot hanasaki
 #
 # Author:
 #   Takasuka
@@ -49,9 +50,15 @@ module.exports = (robot) ->
   robot.respond /menu o(nigiri)?/i, (msg) ->
     msg.send getHanasakiUrl('onigiri')
 
+  robot.respond /hanasaki/i, (msg) ->
+    msg.send getKakakuList()
+
   getHanasakiUrl = (keyword) ->
     now = moment()
     year = now.format 'YYYY'
     hyear = parseInt(year, 10) - 1988
     month = now.format 'M'
     url = "http://hanasaki.ico.bz/upfile/H#{hyear}-#{month}#{keyword}.pdf"
+
+  getKakakuList = (keyword) ->
+    list = "当日9:30迄  - あじさい:440(±20)/330円、ききょう:390(±20)/280円\n前日14:00迄 - ヘルシー:360円、おにぎり:310円、丼:410/250円、麺類:430円、カレー:410/250円"
