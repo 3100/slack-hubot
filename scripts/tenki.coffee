@@ -14,10 +14,10 @@
 moment = require 'moment'
 
 module.exports = (robot) ->
-  robot.respond /tenki saitama/i, (msg) ->
+  robot.respond /tenki saitama$/i, (msg) ->
     msg.send getUrl(14)
 
-  robot.respond /tenki tokyo/i, (msg) ->
+  robot.respond /tenki( tokyo)?$/i, (msg) ->
     msg.send getUrl(16)
 
   calcMinutes = (minutesStr) ->
