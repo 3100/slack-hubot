@@ -33,7 +33,8 @@
     "jsdom":         ">= 0.11.0",
     "underscore":    ">= 1.6.0",
     "sandbox":       ">= 0.8.6",
-    "textspark":     ">= 0.1.0"
+    "textspark":     ">= 0.1.0",
+    "gitio":         ">= 1.0.1"
   },
 
   "engines": {
