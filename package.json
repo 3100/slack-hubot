@@ -26,7 +26,7 @@
   "dependencies": {
     "hubot":         ">= 2.6.0 < 3.0.0",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
-    "hubot-kato":    ">= 0.0.7"
+    "hubot-slack":   ">= 2.1.0"
   },
 
   "engines": {
