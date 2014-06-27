@@ -1,4 +1,6 @@
-# Hubot on our kato-im
+# Hubot on our slack
+
+実質`heroku`用です。
 
 ## Requirements
 
@@ -7,35 +9,16 @@
 
 ## Env
 
-* HUBOT_KATO_LOGIN : katoの専用アカウント
-* HUBOT_KATO_PASSWORD : katoの専用アカウント用パスワード
-* HUBOT_KATO_ROOMS : hubotが購読管理する各ルームのid(複数ある場合はカンマ区切り)
+* HUBOT_SLACK_TOKEN : `slack`で配布されたトークン
+* HUBOT_SLACK_TEAM : `slack`のチーム名
+* HUBOT_SLACK_BOTNAME : hubotの名前
 
 を設定する必要があります。
-
-### 現在対応している部屋は
-
-LazyNight
-
-* hubot部屋
-* 技術
-* 一般
-* 暇な人
-* QA
-* お菓子部
-
-飲み会
-
-* 飲み会一般
-
-開発用
-
-* 開発用
 
 ## Start
 
 ~~~
-./bin/hubot -a kato
+./bin/hubot -a slack
 ~~~
 
 もしデバッグをしたい場合は、シェルで試行するとよいでしょう。
