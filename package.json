@@ -37,7 +37,8 @@
     "textspark":     ">= 0.1.0",
     "gitio":         ">= 1.0.1",
     "soupselect":    ">= 0.2.0",
-    "htmlparser":    ">= 1.7.7"
+    "htmlparser":    ">= 1.7.7",
+    "cron":          ">= 1.0.1"
   },
 
   "engines": {
