@@ -27,4 +27,4 @@ module.exports = (robot) ->
 
   robot.respond /civbg! (\S+) (.+)$/i, (msg) ->
     setValue(msg.match[1], msg.match[2])
-    msg.send "#{msg.match[1]} = #{msg.match[2]. OK."
+    msg.send "#{msg.match[1]} = #{msg.match[2]}. OK."
