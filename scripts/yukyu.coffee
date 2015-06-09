@@ -16,7 +16,8 @@ module.exports = (robot) ->
         msg.send body
         return
       json = JSON.parse(body)
-      id = ids['3100'] # debug
+      id = ids[msg.user.name]
+      #id = ids['3100'] # debug
       if !id
         msg.send "ユーザを識別できませんでしたm(__)m"
         return
