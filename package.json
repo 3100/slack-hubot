@@ -20,6 +20,7 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
+    "bluebird": "^2.9.27",
     "cheerio": ">= 0.17.0",
     "chrono-node": "^1.0.6",
     "cron": ">= 1.0.1",
