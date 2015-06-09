@@ -23,7 +23,7 @@ module.exports = (robot) ->
         return
       for val, i in json.json
         if val.syainid == id.toString()
-          msg.reply "残り:#{val.remain}, フレックス:#{val.flexremain}, 振替:#{val.furikae}, 使用:#{val.used}"
+          msg.send "@#{msg.user.name} 残り:#{val.remain}, フレックス:#{val.flexremain}, 振替:#{val.furikae}, 使用:#{val.used}"
           return
 
 
