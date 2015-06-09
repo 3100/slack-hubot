@@ -45,7 +45,7 @@ module.exports = (robot) ->
       msg.send "ユーザを識別できませんでしたm(__)m"
       return
     p.then(detect(id)).then((val) ->
-      msg.reply "残り:#{val.remain}, フレックス:#{val.flexremain}, 振替:#{val.furikae}, 使用:#{val.used}"
+      msg.send "#{user} = 残り:#{val.remain}, フレックス:#{val.flexremain}, 振替:#{val.furikae}, 使用:#{val.used}"
     , (message) ->
       msg.send message
     )
