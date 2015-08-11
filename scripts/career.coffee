@@ -45,6 +45,7 @@ module.exports = (robot) ->
     if dateLocalStr == 'Invalid date'
       msg.send '入社年月日を正しく認識できませんでした。入力形式はYYYY/M/Dです。'
       return false
+    console.log dateLocalStr
     dict = loadDict(robot) ? {}
     dict[msg.username] = dateLocalStr
     robot.brain.set(BRAIN_KEY, JSON.stringify(dict))
@@ -72,6 +73,7 @@ module.exports = (robot) ->
   loadDateLocalStr = (robot, user) ->
     dict = loadDict(robot)
     return null unless dict?
+    console.log "dict:#{JSON.stringify(dict)}, user:#{user}"
     dict[user]
 
   pick = (arr) ->
