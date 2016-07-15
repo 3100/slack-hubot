@@ -18,6 +18,11 @@ module.exports = (robot) ->
     imageMe msg, '修造 名言', (url) ->
       msg.send url
 
+  robot.hear /(無理|むり|ムリ)|(でき|出来)(ない|ません|ん)|諦め(た|る|よう)/i, (msg) ->
+    imageMe msg, '修造 名言', (url) ->
+      msg.reply url
+
+shuzo = (msg) ->
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
   cb = faces if typeof faces == 'function'
